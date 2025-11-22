@@ -1,0 +1,23 @@
+[
+  {
+    "id": "tanaman-melayu",
+    "nama": "Tanaman Melayu",
+    "penyebab": "Jamur Fusarium oxysporum",
+    "keterangan": "Penyakit menyebabkan layu dan menguning; praktik sanitasi dan fungisida direkomendasikan.",
+    "image": "images/tanaman-melayu.svg"
+  },
+  {
+    "id": "busuk-akar",
+    "nama": "Busuk Akar",
+    "penyebab": "Rhizoctonia solani",
+    "keterangan": "Akar membusuk, perbaiki drainase, hindari genangan air.",
+    "image": "images/busuk-akar.svg"
+  },
+  {
+    "id": "bercak-daun",
+    "nama": "Bercak Daun",
+    "penyebab": "Cercospora sp.",
+    "keterangan": "Bercak coklat pada daun; pangkas area infeksi dan gunakan fungisida.",
+    "image": "images/bercak-daun.svg"
+  }
+]

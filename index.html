@@ -1,20 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head class="site-header">
-<meta charset="UTF-8">
-<title>Diagnosa Tanaman</title>
-<link rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard Diagnosa Penyakit Tanaman</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="menu">
-<a href="beranda.html">Beranda</a>
-<a href="tipe.html">Tipe Penyakit</a>
-<a href="kesimpulan.html">Kesimpulan</a>
-</nav>
-<div class="container">
-<h1>Selamat Datang</h1>
-<p>Gunakan menu navigasi di atas untuk mengakses halaman.</p>
-</div>
-<script src="script.js"></script>
+  <header class="topbar">
+    <div class="brand">🌿 PlantDiag — Dashboard</div>
+    <nav class="topnav">
+      <button data-link="beranda.html" class="nav-btn active">Beranda</button>
+      <button data-link="tipe.html" class="nav-btn">Tipe Penyakit</button>
+      <button data-link="kesimpulan.html" class="nav-btn">Kesimpulan</button>
+    </nav>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <footer class="footer">
+    <div>© 2025 — PlantDiag • Static GitHub Pages friendly</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // load initial page
+    window.addEventListener('DOMContentLoaded', () => {
+      const defaultPage = 'beranda.html';
+      window.APP && APP.loadPage(defaultPage);
+    });
+  </script>
 </body>
 </html>
