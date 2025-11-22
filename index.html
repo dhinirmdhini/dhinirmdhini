@@ -1,62 +1,11 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diagnosa Penyakit Tanaman</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f3f3f3;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-        }
-        label {
-            font-weight: bold;
-        }
-        .gejala-list {
-            margin-left: 20px;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: none;
-            background: #3b82f6;
-            color: white;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #2563eb;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ccc;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background: #e2e8f0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="container">
@@ -64,10 +13,10 @@
 
         <label>Pilih Gejala:</label>
         <div class="gejala-list">
-            <input type="checkbox" id="kuning" value="Daun menguning"> Daun menguning<br>
-            <input type="checkbox" id="layu" value="Tanaman layu"> Tanaman layu<br>
-            <input type="checkbox" id="bercak" value="Bercak pada daun"> Bercak pada daun<br>
-            <input type="checkbox" id="akar" value="Akar membusuk"> Akar membusuk<br>
+            <input type="checkbox" value="Daun menguning"> Daun menguning<br>
+            <input type="checkbox" value="Tanaman layu"> Tanaman layu<br>
+            <input type="checkbox" value="Bercak pada daun"> Bercak pada daun<br>
+            <input type="checkbox" value="Akar membusuk"> Akar membusuk<br>
         </div>
 
         <button onclick="diagnosa()">Diagnosa</button>
@@ -85,46 +34,105 @@
         </table>
     </div>
 
-    <script>
-        const dataPenyakit = [
-            {
-                nama: "Layuh Fusarium",
-                penyebab: "Jamur Fusarium oxysporum",
-                gejala: ["Tanaman layu", "Daun menguning"]
-            },
-            {
-                nama: "Busuk Akar",
-                penyebab: "Jamur Rhizoctonia solani",
-                gejala: ["Akar membusuk", "Tanaman layu"]
-            },
-            {
-                nama: "Bercak Daun",
-                penyebab: "Jamur Cercospora sp.",
-                gejala: ["Bercak pada daun"]
-            }
-        ];
-
-        function diagnosa() {
-            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-            const gejalaDipilih = [];
-            checkboxes.forEach(cb => { if (cb.checked) gejalaDipilih.push(cb.value); });
-
-            const hasil = dataPenyakit.filter(item => 
-                item.gejala.some(g => gejalaDipilih.includes(g))
-            );
-
-            const tbody = document.querySelector('#hasilTable tbody');
-            tbody.innerHTML = "";
-
-            hasil.forEach(item => {
-                const row = `<tr>
-                        <td>${item.nama}</td>
-                        <td>${item.penyebab}</td>
-                        <td>${item.gejala.join(", ")}</td>
-                    </tr>`;
-                tbody.innerHTML += row;
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h2 {
+    text-align: center;
+}
+label {
+    font-weight: bold;
+}
+.gejala-list {
+    margin-left: 20px;
+}
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background: #2563eb;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #ccc;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background: #e2e8f0;
+}
+
+
+// script.js
+const dataPenyakit = [
+    {
+        nama: "Layuh Fusarium",
+        penyebab: "Jamur Fusarium oxysporum",
+        gejala: ["Tanaman layu", "Daun menguning"]
+    },
+    {
+        nama: "Busuk Akar",
+        penyebab: "Jamur Rhizoctonia solani",
+        gejala: ["Akar membusuk", "Tanaman layu"]
+    },
+    {
+        nama: "Bercak Daun",
+        penyebab: "Jamur Cercospora sp.",
+        gejala: ["Bercak pada daun"]
+    }
+];
+
+function diagnosa() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const gejalaDipilih = [];
+
+    checkboxes.forEach(cb => {
+        if (cb.checked) gejalaDipilih.push(cb.value);
+    });
+
+    const hasil = dataPenyakit.filter(item =>
+        item.gejala.some(g => gejalaDipilih.includes(g))
+    );
+
+    const tbody = document.querySelector('#hasilTable tbody');
+    tbody.innerHTML = "";
+
+    hasil.forEach(item => {
+        const row = `<tr>
+                <td>${item.nama}</td>
+                <td>${item.penyebab}</td>
+                <td>${item.gejala.join(", ")}</td>
+            </tr>`;
+        tbody.innerHTML += row;
+    });
+}
