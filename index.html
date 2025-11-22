@@ -1,91 +1,20 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sistem Diagnosa Penyakit Tanaman</title>
-  <link rel="stylesheet" href="style.css" />
+<html lang="en">
+<head class="site-header">
+<meta charset="UTF-8">
+<title>Diagnosa Tanaman</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Sistem Diagnosa Penyakit Tanaman</h1>
-      <nav>
-        <ul class="menu">
-          <li><a href="#beranda">Beranda</a></li>
-          <li><a href="#tipe">Tipe Penyakit</a></li>
-          <li><a href="#kesimpulan">Kesimpulan</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- BERANDA -->
-    <section id="beranda" class="panel">
-      <h2>Beranda</h2>
-      <p>
-        Website ini membantu mengelompokkan dan mendiagnosa penyakit pada tanaman.
-        Pilih tipe penyakit di menu <strong>Tipe Penyakit</strong>, klik <em>Diagnosa</em>
-        untuk melihat detail dan ringkasan kesimpulan di menu <strong>Kesimpulan</strong>.
-      </p>
-
-      <h3>Data Anggota Kelompok</h3>
-      <div class="anggota-area">
-        <div id="anggotaList" class="anggota-list">Belum ada anggota.</div>
-
-        <div class="anggota-form">
-          <input id="anggotaInput" type="text" placeholder="Masukkan nama anggota..." />
-          <button id="tambahAnggotaBtn">Tambah Anggota</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- TIPE PENYAKIT -->
-    <section id="tipe" class="panel">
-      <h2>Tipe Penyakit</h2>
-
-      <label for="dropdownPenyakit">Pilih Jenis Penyakit:</label>
-      <select id="dropdownPenyakit" aria-label="Pilih jenis penyakit">
-        <option value="">-- Pilih --</option>
-      </select>
-
-      <div class="controls">
-        <button id="diagnosaBtn">Diagnosa</button>
-        <button id="lihatTabelBtn">Lihat Semua Penyakit (Tabel)</button>
-      </div>
-
-      <div id="detailDiagnosa" class="detail-area" aria-live="polite"></div>
-
-      <h3>Diagnosa dalam bentuk tabel</h3>
-      <div class="table-wrap">
-        <table id="tabelPenyakit" class="hidden">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Penyakit</th>
-              <th>Penyebab</th>
-              <th>Keterangan / Gejala</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- KESIMPULAN -->
-    <section id="kesimpulan" class="panel">
-      <h2>Kesimpulan</h2>
-      <p id="hasilKesimpulan">Belum ada diagnosa yang dipilih.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>Made for educational purposes — bisa diupload ke GitHub Pages (static site).</small>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<nav class="menu">
+<a href="beranda.html">Beranda</a>
+<a href="tipe.html">Tipe Penyakit</a>
+<a href="kesimpulan.html">Kesimpulan</a>
+</nav>
+<div class="container">
+<h1>Selamat Datang</h1>
+<p>Gunakan menu navigasi di atas untuk mengakses halaman.</p>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
