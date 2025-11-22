@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tipe Penyakit</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+<a href="index.html">Beranda</a>
+<a href="tipe.html">Tipe Penyakit</a>
+<a href="kesimpulan.html">Kesimpulan</a>
+</nav>
+
+<div class="container">
+<h2>Pilih Penyakit Tanaman</h2>
+
+<select id="penyakitSelect" class="dropdown">
+<option value="">-- Pilih Penyakit --</option>
+<option value="Tanaman Melayu">Tanaman Melayu</option>
+<option value="Busuk Akar">Busuk Akar</option>
+<option value="Karat Daun">Karat Daun</option>
+</select>
+
+<button onclick="diagnosa()" class="btn">Diagnosa</button>
+
+<div id="hasil"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
