@@ -1,138 +1,91 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diagnosa Penyakit Tanaman</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistem Diagnosa Penyakit Tanaman</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
     <div class="container">
-        <h2>Diagnosa Penyakit Tanaman</h2>
-
-        <label>Pilih Gejala:</label>
-        <div class="gejala-list">
-            <input type="checkbox" value="Daun menguning"> Daun menguning<br>
-            <input type="checkbox" value="Tanaman layu"> Tanaman layu<br>
-            <input type="checkbox" value="Bercak pada daun"> Bercak pada daun<br>
-            <input type="checkbox" value="Akar membusuk"> Akar membusuk<br>
-        </div>
-
-        <button onclick="diagnosa()">Diagnosa</button>
-
-        <h3>Hasil Diagnosa</h3>
-        <table id="hasilTable">
-            <thead>
-                <tr>
-                    <th>Penyakit</th>
-                    <th>Penyebab</th>
-                    <th>Gejala Terkait</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+      <h1>Sistem Diagnosa Penyakit Tanaman</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tipe">Tipe Penyakit</a></li>
+          <li><a href="#kesimpulan">Kesimpulan</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <script src="script.js"></script>
+  <main class="container">
+    <!-- BERANDA -->
+    <section id="beranda" class="panel">
+      <h2>Beranda</h2>
+      <p>
+        Website ini membantu mengelompokkan dan mendiagnosa penyakit pada tanaman.
+        Pilih tipe penyakit di menu <strong>Tipe Penyakit</strong>, klik <em>Diagnosa</em>
+        untuk melihat detail dan ringkasan kesimpulan di menu <strong>Kesimpulan</strong>.
+      </p>
+
+      <h3>Data Anggota Kelompok</h3>
+      <div class="anggota-area">
+        <div id="anggotaList" class="anggota-list">Belum ada anggota.</div>
+
+        <div class="anggota-form">
+          <input id="anggotaInput" type="text" placeholder="Masukkan nama anggota..." />
+          <button id="tambahAnggotaBtn">Tambah Anggota</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPE PENYAKIT -->
+    <section id="tipe" class="panel">
+      <h2>Tipe Penyakit</h2>
+
+      <label for="dropdownPenyakit">Pilih Jenis Penyakit:</label>
+      <select id="dropdownPenyakit" aria-label="Pilih jenis penyakit">
+        <option value="">-- Pilih --</option>
+      </select>
+
+      <div class="controls">
+        <button id="diagnosaBtn">Diagnosa</button>
+        <button id="lihatTabelBtn">Lihat Semua Penyakit (Tabel)</button>
+      </div>
+
+      <div id="detailDiagnosa" class="detail-area" aria-live="polite"></div>
+
+      <h3>Diagnosa dalam bentuk tabel</h3>
+      <div class="table-wrap">
+        <table id="tabelPenyakit" class="hidden">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Penyakit</th>
+              <th>Penyebab</th>
+              <th>Keterangan / Gejala</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- KESIMPULAN -->
+    <section id="kesimpulan" class="panel">
+      <h2>Kesimpulan</h2>
+      <p id="hasilKesimpulan">Belum ada diagnosa yang dipilih.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Made for educational purposes — bisa diupload ke GitHub Pages (static site).</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-/* style.css */
-body {
-    font-family: Arial, sans-serif;
-    background: #f3f3f3;
-    margin: 0;
-    padding: 20px;
-}
-.container {
-    max-width: 900px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-h2 {
-    text-align: center;
-}
-label {
-    font-weight: bold;
-}
-.gejala-list {
-    margin-left: 20px;
-}
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    background: #3b82f6;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-button:hover {
-    background: #2563eb;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-table, th, td {
-    border: 1px solid #ccc;
-}
-th, td {
-    padding: 10px;
-    text-align: left;
-}
-th {
-    background: #e2e8f0;
-}
-
-
-// script.js
-const dataPenyakit = [
-    {
-        nama: "Layuh Fusarium",
-        penyebab: "Jamur Fusarium oxysporum",
-        gejala: ["Tanaman layu", "Daun menguning"]
-    },
-    {
-        nama: "Busuk Akar",
-        penyebab: "Jamur Rhizoctonia solani",
-        gejala: ["Akar membusuk", "Tanaman layu"]
-    },
-    {
-        nama: "Bercak Daun",
-        penyebab: "Jamur Cercospora sp.",
-        gejala: ["Bercak pada daun"]
-    }
-];
-
-function diagnosa() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const gejalaDipilih = [];
-
-    checkboxes.forEach(cb => {
-        if (cb.checked) gejalaDipilih.push(cb.value);
-    });
-
-    const hasil = dataPenyakit.filter(item =>
-        item.gejala.some(g => gejalaDipilih.includes(g))
-    );
-
-    const tbody = document.querySelector('#hasilTable tbody');
-    tbody.innerHTML = "";
-
-    hasil.forEach(item => {
-        const row = `<tr>
-                <td>${item.nama}</td>
-                <td>${item.penyebab}</td>
-                <td>${item.gejala.join(", ")}</td>
-            </tr>`;
-        tbody.innerHTML += row;
-    });
-}
