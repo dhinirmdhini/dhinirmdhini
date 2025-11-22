@@ -1,6 +1,6 @@
 :root{
-  --bg:#0f172a;
-  --card:#0b1220;
+  --bg:#05e126;
+  --card:#46260b;
   --accent:#16a34a;
   --muted:#94a3b8;
   --glass: rgba(255,255,255,0.03);
@@ -38,7 +38,7 @@ html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-
 /* form */
 .form-row{display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap}
 .select-wrap{display:flex;gap:10px;align-items:center;flex:1}
-.modern-select{padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:white; min-width:240px;font-weight:600}
+.modern-select{padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:rgb(45, 45, 45); min-width:240px;font-weight:600}
 .ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:8px 10px;border-radius:8px;cursor:pointer}
 .actions{display:flex;gap:10px}
 .primary{background:linear-gradient(90deg,var(--accent), #16a34a);border:0;padding:10px 16px;border-radius:10px;color:white;cursor:pointer;font-weight:700}
