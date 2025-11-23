@@ -111,3 +111,16 @@ window.APP = (function(){
   app.loadDiseases = loadDiseases;
   return app;
 })();
+
+// HAMBURGER MENU
+document.addEventListener('DOMContentLoaded', () => {
+  const ham = document.getElementById('hamburgerBtn');
+  const nav = document.querySelector('.topnav');
+
+  if (ham && nav) {
+    ham.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  }
+});
+

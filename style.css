@@ -201,11 +201,7 @@ html,body{
 }
 
 /* RESPONSIVE */
-@media (max-width:920px){
-  .panel-grid{grid-template-columns:1fr}
-  .topnav{display:none}
-  .brand{font-size:16px}
-}
+
 
 /* Kolom gambar anggota */
 .anggota-foto img{
@@ -227,4 +223,68 @@ html,body{
 .anggota-foto{
   width: 100px;
   text-align: center;
+}
+
+
+/* HAMBURGER DEFAULT */
+.hamburger{
+  display:none;
+  background:transparent;
+  border:0;
+  font-size:26px;
+  cursor:pointer;
+  color:var(--accent-2);
+}
+
+/* ---- RESPONSIVE MOBILE ---- */
+@media (max-width:920px){
+
+  .topbar{
+    position:relative;
+  }
+
+  .hamburger{
+    display:block;
+    font-size:28px;
+    cursor:pointer;
+    background:transparent;
+    border:0;
+    color:var(--accent-2);
+  }
+
+  .topnav{
+    display:none;
+    flex-direction:column;
+    gap:8px;
+    position:absolute;
+    right:14px;
+    top:60px;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(10px);
+    padding:14px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    z-index:999;
+  }
+
+  .topnav.show{
+    display:flex;
+    animation:slideDown 0.25s ease-out;
+  }
+
+  .brand{
+    font-size:16px;
+  }
+}
+
+/* Animasi glass slide-down */
+@keyframes slideDown{
+  from{
+    transform:translateY(-10px);
+    opacity:0;
+  }
+  to{
+    transform:translateY(0);
+    opacity:1;
+  }
 }
