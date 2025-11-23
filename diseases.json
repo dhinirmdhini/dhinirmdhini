@@ -28,7 +28,7 @@
     "nama": "Karat Daun",
     "penyebab": "Puccinia spp.",
     "keterangan": "Muncul pustula oranye seperti karat. Gunakan fungisida berbahan propikonazol.",
-    "image": "images/karat_daun.jpg",
+    "image": "images/Karat_daun.jpg",
     "imageType": "jpg"
   },
   {
@@ -96,4 +96,5 @@
     "imageType": "jpg"
   } 
 ]
+
 
