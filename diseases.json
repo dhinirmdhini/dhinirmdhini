@@ -36,7 +36,7 @@
     "nama": "Virus Mosaik",
     "penyebab": "Virus seperti TMV dan CMV",
     "keterangan": "Daun belang kuning-hijau, pertumbuhan terhambat. Tidak ada obat, tanaman harus dimusnahkan.",
-    "image": "images/virus_mosaik.jpg",
+    "image": "images/Virus_mosaik.jpg",
     "imageType": "jpg"
   },
   {
@@ -44,7 +44,7 @@
     "nama": "Busuk Batang",
     "penyebab": "Jamur Sclerotinia, Fusarium",
     "keterangan": "Batang cokelat dan berlendir. Aplikasikan Trichoderma di pangkal batang.",
-    "image": "images/busuk_batang.jpeg",
+    "image": "images/Busuk_batang.jpeg",
     "imageType": "jpeg"
   },
   {
@@ -68,7 +68,7 @@
     "nama": "Busuk Buah",
     "penyebab": "Jamur Colletotrichum, Botrytis, Phytophthora.",
     "keterangan": "Buah membusuk, bercak hitam, Jaga buah agar tidak menyentuh tanah (gunakan mulsa).",
-    "image": "images/busuk_buah.jpg",
+    "image": "images/Busuk_buah.jpg",
     "imageType": "jpg"
   },
    {
@@ -92,9 +92,10 @@
     "nama": "Embun Tepung",
     "penyebab": " Erysiphe, Oidium, Leveillula.",
     "keterangan": "Daun tertutup tepung putih; Semprot dengan sulfur (belerang).",
-    "image": "images/embun_tepung.jpg",
+    "image": "images/Embun_tepung.jpg",
     "imageType": "jpg"
   } 
 ]
+
 
 
