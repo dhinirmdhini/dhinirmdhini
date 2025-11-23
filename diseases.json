@@ -12,7 +12,7 @@
     "nama": "Busuk Akar",
     "penyebab": "Rhizoctonia solani",
     "keterangan": "Akar membusuk, perbaiki drainase, hindari genangan air.",
-    "image": "images/busuk_akar.png",
+    "image": "images/Busuk_akar.png",
     "imageType": "png"
   },
   {
@@ -96,3 +96,4 @@
     "imageType": "jpg"
   } 
 ]
+
