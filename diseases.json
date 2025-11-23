@@ -4,20 +4,95 @@
     "nama": "Tanaman Melayu",
     "penyebab": "Jamur Fusarium oxysporum",
     "keterangan": "Penyakit menyebabkan layu dan menguning; praktik sanitasi dan fungisida direkomendasikan.",
-    "image": "images/tanaman-melayu.svg"
+    "image": "images/fusarium.jpg",
+    "imageType": "jpg"
   },
   {
     "id": "busuk-akar",
     "nama": "Busuk Akar",
     "penyebab": "Rhizoctonia solani",
     "keterangan": "Akar membusuk, perbaiki drainase, hindari genangan air.",
-    "image": "images/busuk-akar.svg"
+    "image": "images/busuk_akar.png",
+    "imageType": "png"
   },
   {
     "id": "bercak-daun",
     "nama": "Bercak Daun",
     "penyebab": "Cercospora sp.",
     "keterangan": "Bercak coklat pada daun; pangkas area infeksi dan gunakan fungisida.",
-    "image": "images/bercak-daun.svg"
-  }
+    "image": "images/bercak_daun.png",
+    "imageType": "png"
+  },
+  {
+    "id": "karat-daun",
+    "nama": "Karat Daun",
+    "penyebab": "Puccinia spp.",
+    "keterangan": "Muncul pustula oranye seperti karat. Gunakan fungisida berbahan propikonazol.",
+    "image": "images/karat_daun.jpg",
+    "imageType": "jpg"
+  },
+  {
+    "id": "virus-mosaik",
+    "nama": "Virus Mosaik",
+    "penyebab": "Virus seperti TMV dan CMV",
+    "keterangan": "Daun belang kuning-hijau, pertumbuhan terhambat. Tidak ada obat, tanaman harus dimusnahkan.",
+    "image": "images/virus_mosaik.jpg",
+    "imageType": "jpg"
+  },
+  {
+    "id": "busuk-batang",
+    "nama": "Busuk Batang",
+    "penyebab": "Jamur Sclerotinia, Fusarium",
+    "keterangan": "Batang cokelat dan berlendir. Aplikasikan Trichoderma di pangkal batang.",
+    "image": "images/busuk_batang.jpeg",
+    "imageType": "jpeg"
+  },
+  {
+    "id": "busuk-pangkal-batang",
+    "nama": "Busuk Pangkal Batang",
+    "penyebab": "Jamur Ganoderma boninense",
+    "keterangan": "Pangkal batang membusuk, pelepah mudah patah. Kurangi kelembapan pangkal.",
+    "image": "images/busuk_pangkal batang.jpg",
+    "imageType": "jpg"
+  },
+   {
+    "id": "hawar-daun",
+    "nama": "Hawar Daun",
+    "penyebab": "Jamur Helminthosporium, Phytophthora, bakteri Xanthomonas.",
+    "keterangan": "Daun terbakar (nekrosis), menurunkan kemampuan fotosintesit, Potong daun yang terkena hawar.",
+    "image": "images/hawar_daun.jpg",
+    "imageType": "jpg"
+  },
+   {
+    "id": "busuk-buah",
+    "nama": "Busuk Buah",
+    "penyebab": "Jamur Colletotrichum, Botrytis, Phytophthora.",
+    "keterangan": "Buah membusuk, bercak hitam, Jaga buah agar tidak menyentuh tanah (gunakan mulsa).",
+    "image": "images/busuk_buah.jpg",
+    "imageType": "jpg"
+  },
+   {
+    "id": "akar bercabang/-akar bengkak",
+    "nama": "Akar Bercabang/ Akar Bengkak",
+    "penyebab": "Plasmodiophora brassicae (organisme mirip jamur).",
+    "keterangan": "Akar membengkak/bengkok,Umum pada tanaman kubis-kubisan, Lakukan solarisasi tanah (tutup plastik 3–4 minggu).",
+    "image": "images/akar_bengkak.jpg",
+    "imageType": "jpg"
+  },
+  {
+    "id": "busuk-kuncup",
+    "nama": "Busuk Kuncup",
+    "penyebab": "Phytophthora palmivora.",
+    "keterangan": "Tanaman dapat mati karena kuncup (titik tumbuh) rusak total, Potong kuncup yang busuk dan oles/semprot fungisida tembaga.",
+    "image": "images/busuk_kuncup.jpg",
+    "imageType": "jpg"
+  },
+ {
+    "id": "embun-tepung",
+    "nama": "Embun Tepung",
+    "penyebab": " Erysiphe, Oidium, Leveillula.",
+    "keterangan": "Daun tertutup tepung putih; Semprot dengan sulfur (belerang).",
+    "image": "images/embun_tepung.jpg",
+    "imageType": "jpg"
+  } 
 ]
