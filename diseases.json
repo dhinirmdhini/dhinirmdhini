@@ -68,7 +68,7 @@
     "nama": "Busuk Buah",
     "penyebab": "Jamur Colletotrichum, Botrytis, Phytophthora.",
     "keterangan": "Buah membusuk, bercak hitam, Jaga buah agar tidak menyentuh tanah (gunakan mulsa).",
-    "image": "images/Busuk_buah.jpg",
+    "image": "images/Busuk_Buah.jpg",
     "imageType": "jpg"
   },
    {
@@ -96,6 +96,7 @@
     "imageType": "jpg"
   } 
 ]
+
 
 
 
